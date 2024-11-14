@@ -11,13 +11,16 @@ public class Camion_e extends Vehiculo_electrico {
         PLATAFORMA,VOLQUETE
     }
 
-    public Camion_e(String codigo, String marca, boolean estado, String modelo, int cambios, int velocidadmaxima, int cilindraje,
-            String autonomiacargacompleta, int tiempopromediocarga, double capacidadCarga, boolean frenosAire,
-            boolean ABS, int numeroEjes) {
-        super(codigo, marca, estado, modelo, cambios, velocidadmaxima, cilindraje, autonomiacargacompleta, tiempopromediocarga);
+    
+
+    public Camion_e(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+            co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, String autonomiacargacompleta,
+            int tiempopromediocarga, double capacidadCarga, boolean frenosAire, boolean aBS, int numeroEjes) {
+        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, autonomiacargacompleta,
+                tiempopromediocarga);
         this.capacidadCarga = capacidadCarga;
         this.frenosAire = frenosAire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.numeroEjes = numeroEjes;
     }
 

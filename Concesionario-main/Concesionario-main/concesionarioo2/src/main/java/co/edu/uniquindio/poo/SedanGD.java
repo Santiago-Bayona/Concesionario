@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class SedanGD extends VehiculoGD {
 
@@ -9,7 +9,7 @@ public class SedanGD extends VehiculoGD {
     
     
     public SedanGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroPuertas,
+            TipoTransmision tipoTransmision, GD gd, int numeroPuertas,
             int numeroBolsas, int numeroPasajeros, double capacidadMaletero, boolean aireAcondicionado,
             boolean camaraReversa, boolean velocidadCrucero, boolean sensoresDeColision, boolean traficoCruzado,
             boolean aPC, boolean aBS) {

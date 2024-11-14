@@ -11,18 +11,22 @@ public class Pick_up_e extends Vehiculo_electrico {
     public boolean cuatrox4;
     public double capacidadCajaCarga;
 
-    public Pick_up_e(String codigo, String marca, boolean cuatrox4, String modelo, int numerobolsasAire, int numeropasajeros,
-            int numeropuertas, boolean aireAcondionado, boolean camaraReversa, int numerobolsasaire, boolean ABS, double capacidadCajaCarga) {
-        super(codigo, marca, cuatrox4, modelo, numerobolsasAire, numeropasajeros, numeropuertas, codigo, numerobolsasAire);
+    
+
+    public Pick_up_e(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+            TipoTransmision tipoTransmision, String autonomiacargacompleta,
+            int tiempopromediocarga, int numeropasajeros, int numeropuertas, boolean aireAcondionado,
+            boolean camaraReversa, int numerobolsasaire, boolean aBS, boolean cuatrox4, double capacidadCajaCarga) {
+        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, autonomiacargacompleta,
+                tiempopromediocarga);
         this.numeropasajeros = numeropasajeros;
         this.numeropuertas = numeropuertas;
         this.aireAcondionado = aireAcondionado;
         this.camaraReversa = camaraReversa;
         this.numerobolsasaire = numerobolsasaire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.cuatrox4 = cuatrox4;
         this.capacidadCajaCarga = capacidadCajaCarga;
-
     }
 
     public int getNumeropasajeros() {

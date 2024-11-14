@@ -14,17 +14,27 @@ public class Sedan_e extends Vehiculo_electrico {
     private boolean asistenciaPermanenciaCarril;
     private boolean ABS;
 
-    public Sedan_e(String codigo, String marca, boolean estado, String modelo, int cambios, int velocidadmaxima, int cilindraje,
-            String autonomiacargacompleta, int tiempopromediocarga, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,
-            boolean aireAcondionado, boolean camaraReversa, boolean velocidadCrucero, int numeroBolsasAire, boolean sensoresColision,
-            boolean sensoresTraficoCruzado, boolean asistenciaPermanenciaCarril, boolean aBS) {
-        super(codigo, marca, estado, modelo, cambios, velocidadmaxima, cilindraje, autonomiacargacompleta, tiempopromediocarga);
+    
+
+    public Sedan_e(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+            co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, String autonomiacargacompleta,
+            int tiempopromediocarga, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,
+            boolean aireAcondionado, boolean camaraReversa, boolean velocidadCrucero, int numeroBolsasAire,
+            boolean sensoresColision, boolean sensoresTraficoCruzado, boolean asistenciaPermanenciaCarril,
+            boolean aBS) {
+        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, autonomiacargacompleta,
+                tiempopromediocarga);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.capacidadMaletero = capacidadMaletero;
         this.aireAcondionado = aireAcondionado;
         this.camaraReversa = camaraReversa;
-
+        this.velocidadCrucero = velocidadCrucero;
+        this.numeroBolsasAire = numeroBolsasAire;
+        this.sensoresColision = sensoresColision;
+        this.sensoresTraficoCruzado = sensoresTraficoCruzado;
+        this.asistenciaPermanenciaCarril = asistenciaPermanenciaCarril;
+        ABS = aBS;
     }
 
     public int getNumeroPasajeros() {

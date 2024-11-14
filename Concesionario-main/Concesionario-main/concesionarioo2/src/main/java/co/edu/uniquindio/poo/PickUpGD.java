@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class PickUpGD extends VehiculoGD {
     private int numeroPasajeros,numeroPuertas,numeroBolsas;
@@ -7,7 +7,7 @@ public class PickUpGD extends VehiculoGD {
     
     
     public PickUpGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroPasajeros,
+            TipoTransmision tipoTransmision, GD gd, int numeroPasajeros,
             int numeroPuertas, int numeroBolsas, boolean aireAcondicionado, boolean camaraReversa, boolean aBS,
             boolean cuatroxCuatro, double capaciadadCajaCarga) {
         super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);

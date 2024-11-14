@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class DeportivoGD extends VehiculoGD{
     private int numeroPasajeros, numeroBolsas, numeroPuertas, CaballosFuerza, Tiempo;
@@ -6,7 +6,7 @@ public class DeportivoGD extends VehiculoGD{
     
 
     public DeportivoGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima,
-            int cilindraje, co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd,
+            int cilindraje, TipoTransmision tipoTransmision, GD gd,
             int numeroPasajeros, int numeroBolsas, int numeroPuertas, int caballosFuerza, int tiempo) {
         super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         this.numeroPasajeros = numeroPasajeros;

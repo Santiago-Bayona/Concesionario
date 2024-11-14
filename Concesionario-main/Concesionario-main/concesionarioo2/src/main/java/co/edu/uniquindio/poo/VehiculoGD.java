@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class VehiculoGD extends Vehiculo{
 
@@ -7,7 +7,7 @@ public class VehiculoGD extends Vehiculo{
         GASOLINA,DIESEL
     }
     public VehiculoGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd) {
+            TipoTransmision tipoTransmision, GD gd) {
         super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision);
         this.gd = gd;
     }

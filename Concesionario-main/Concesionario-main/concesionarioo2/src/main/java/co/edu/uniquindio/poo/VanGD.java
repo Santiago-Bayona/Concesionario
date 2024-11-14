@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class VanGD extends VehiculoGD{
     
@@ -8,7 +8,7 @@ public class VanGD extends VehiculoGD{
     
 
     public VanGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroBolsas,
+            TipoTransmision tipoTransmision, GD gd, int numeroBolsas,
             int numeroPasajeros, int numeroPuertas, boolean camaraReversa, boolean aBS, boolean aireAcondicionado,
             double capacidadMaletero) {
         super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);

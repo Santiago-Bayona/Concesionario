@@ -8,15 +8,19 @@ public class Van_e extends Vehiculo_electrico{
     public boolean ABS;
     public double capacidadMaletero;
 
-    public Van_e(String codigo, String marca, boolean estado, String modelo, int cambios, int velocidadmaxima, int cilindraje,
-            String autonomiacargacompleta, int tiempopromediocarga, int numeropuertas, boolean aireAcondionado, boolean camaraReversa,
-            int numeroBolsasAire, boolean ABS, double capacidadMaletero) {
-        super(codigo, marca, estado, modelo, cambios, velocidadmaxima, cilindraje, autonomiacargacompleta, tiempopromediocarga);
+    
+
+    public Van_e(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+            TipoTransmision tipoTransmision, String autonomiacargacompleta,
+            int tiempopromediocarga, int numeropuertas, boolean aireAcondionado, boolean camaraReversa,
+            int numeroBolsasAire, boolean aBS, double capacidadMaletero) {
+        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, autonomiacargacompleta,
+                tiempopromediocarga);
         this.numeropuertas = numeropuertas;
         this.aireAcondionado = aireAcondionado;
         this.camaraReversa = camaraReversa;
         this.numeroBolsasAire = numeroBolsasAire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.capacidadMaletero = capacidadMaletero;
     }
 
