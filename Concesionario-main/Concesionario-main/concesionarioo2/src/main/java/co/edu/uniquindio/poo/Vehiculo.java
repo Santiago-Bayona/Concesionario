@@ -10,7 +10,7 @@ public class Vehiculo {
     private int Cilindraje;
     public TipoTransmision TipoTransmision;
     public enum TipoTransmision{
-        mMANUAL, AUTOMATICA
+        MANUAL, AUTOMATICA
     } 
     
     
