@@ -7,7 +7,7 @@ public class Administrador extends Persona {
 
     public Collection<Empleado> empleados;
     public Collection<VehiculoElectrico> vehiculoElectricos;
-    public Collection<VehiculoGD> vehiculoGDs;
+    public Collection<VehiculoGasolinaDiesel> VehiculoGasolinaDiesels;
     public Collection<VehiculoHibrido> vehiculoHibridos;
     public Collection<Cliente> clientes;
 
@@ -20,7 +20,7 @@ public class Administrador extends Persona {
         super(nombre, apellidos, correo, contraseñaCorrreo, respuestaVerificacion, edad, cedula, preguntaSeguridad);
         this.empleados = new LinkedList<>();
         this.vehiculoElectricos = new LinkedList<>();
-        this.vehiculoGDs = new LinkedList<>();
+        this.VehiculoGasolinaDiesels = new LinkedList<>();
         this.vehiculoHibridos =new LinkedList<>();
         this.clientes =new LinkedList<>();
     }
@@ -71,16 +71,16 @@ public class Administrador extends Persona {
 
 
 
-    public Collection<VehiculoGD> getVehiculoGDs() {
-        return vehiculoGDs;
+    public Collection<VehiculoGasolinaDiesel> getVehiculoGasolinaDiesels() {
+        return VehiculoGasolinaDiesels;
     }
 
 
 
 
 
-    public void setVehiculoGDs(Collection<VehiculoGD> vehiculoGDs) {
-        this.vehiculoGDs = vehiculoGDs;
+    public void setVehiculoGasolinaDiesels(Collection<VehiculoGasolinaDiesel> VehiculoGasolinaDiesels) {
+        this.VehiculoGasolinaDiesels = VehiculoGasolinaDiesels;
     }
 
 
@@ -151,25 +151,25 @@ public class Administrador extends Persona {
         }
     }
 
-    public boolean verificarVehiculoGD(String placa) {
-        for (VehiculoGD vehiculoGD : vehiculoGDs) {
-            if (placa.equals(vehiculoGD.getPlaca())) {
+    public boolean verificarVehiculoGasolinaDiesel(String placa) {
+        for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
+            if (placa.equals(VehiculoGasolinaDiesel.getPlaca())) {
                 return false;
             }
         }
         return true;
     }
 
-    public void agregarVehiculoGD(VehiculoGD vehiculoGD){
-        if(verificarVehiculoGD(vehiculoGD.getPlaca())){
-            vehiculoGDs.add(vehiculoGD);
+    public void agregarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel VehiculoGasolinaDiesel){
+        if(verificarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel.getPlaca())){
+            VehiculoGasolinaDiesels.add(VehiculoGasolinaDiesel);
         }
     }
 
-    public void eliminarVehiculoGD(String placa) {
-        for (VehiculoGD vehiculoGD : vehiculoGDs) {
-            if (vehiculoGD.getPlaca().equals(placa)) {
-                vehiculoGDs.remove(vehiculoGD);
+    public void eliminarVehiculoGasolinaDiesel(String placa) {
+        for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
+            if (VehiculoGasolinaDiesel.getPlaca().equals(placa)) {
+                VehiculoGasolinaDiesels.remove(VehiculoGasolinaDiesel);
                 break;
             }
         }
