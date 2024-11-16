@@ -8,12 +8,12 @@ public class SuvElectrico extends SedanElectrico {
             String autonomiacargacompleta, int tiempopromediocarga, int numeroPasajeros, int numeroPuertas,
             double capacidadMaletero, boolean aireAcondionado, boolean camaraReversa, boolean velocidadCrucero,
             int numeroBolsasAire, boolean sensoresColision, boolean sensoresTraficoCruzado, boolean asistenciaPermanenciaCarril,    
-            boolean aBS, boolean todoterreno,co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision) {
+            boolean aBS, boolean cuatroxcuatro,co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision) {
                 
             super(codigo, marca, estado, modelo, cambios, velocidadmaxima, cilindraje, autonomiacargacompleta, tiempopromediocarga,
                         numeroPasajeros, numeroPuertas, capacidadMaletero, aireAcondionado, camaraReversa, velocidadCrucero,
                         numeroBolsasAire, sensoresColision, sensoresTraficoCruzado, asistenciaPermanenciaCarril, aBS,tipoTransmision);
-            this.todoterreno = todoterreno;
+            this.cuatroxcuatro = cuatroxcuatro;
     }
 
     public boolean iscuatroxcuatro() {
