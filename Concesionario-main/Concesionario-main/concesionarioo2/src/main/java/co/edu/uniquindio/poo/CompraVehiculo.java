@@ -7,15 +7,19 @@ public class CompraVehiculo {
     private String codigo;
     private int precioVenta;
     private boolean revisionTecnicaAprobado;
-    private Collection <Vehiculo> vehiculos;
+    private VehiculoGasolinaDiesel VehiculoGasolinaDiesel;
+    private VehiculoHibrido vehiculoHibrido;
+    private VehiculoElectrico vehiculoElectrico;
     private Empleado empleado; 
     private Cliente cliente;
 
-    public CompraVehiculo (String codigo, int precioVenta, boolean revisionTecnicaAprobado, Empleado empleado, Cliente cliente){
+    public CompraVehiculo (String codigo, int precioVenta, boolean revisionTecnicaAprobado,  VehiculoGasolinaDiesel VehiculoGasolinaDiesel, VehiculoHibrido vehiculoHibrido, VehiculoElectrico vehiculoElectrico, Empleado empleado, Cliente cliente){
         this.codigo = codigo;
         this.precioVenta = precioVenta;
         this.revisionTecnicaAprobado = revisionTecnicaAprobado;
-        this.vehiculos = new LinkedList<>();
+        this.vehiculoGasolinaDiesel = vehiculoGasolinaDiesel;
+        this.vehiculoHibrido = vehiculoHibrido;
+        this.vehiculoElectrico = vehiculoElectrico;
         this.empleado = empleado;
         this.cliente = cliente;
     }
@@ -44,13 +48,28 @@ public class CompraVehiculo {
         this.revisionTecnicaAprobado = revisionTecnicaAprobado;
     }
 
-
-    public Collection<Vehiculo> getVehiculos() {
-        return vehiculos;
+    public VehiculoGasolinaDiesel getVehiculoGasolinaDiesel() {
+        return VehiculoGasolinaDiesel;
     }
 
-    public void setVehiculos(Collection<Vehiculo> vehiculos) {
-        this.vehiculos = vehiculos;
+    public void setVehiculoGasolinaDiesel(VehiculoGasolinaDiesel vehiculoGasolinaDiesel) {
+        VehiculoGasolinaDiesel = vehiculoGasolinaDiesel;
+    }
+
+    public VehiculoHibrido getVehiculoHibrido() {
+        return vehiculoHibrido;
+    }
+
+    public void setVehiculoHibrido(VehiculoHibrido vehiculoHibrido) {
+        this.vehiculoHibrido = vehiculoHibrido;
+    }
+
+    public VehiculoElectrico getVehiculoElectrico() {
+        return vehiculoElectrico;
+    }
+
+    public void setVehiculoElectrico(VehiculoElectrico vehiculoElectrico) {
+        this.vehiculoElectrico = vehiculoElectrico;
     }
 
     public Empleado getEmpleado() {
