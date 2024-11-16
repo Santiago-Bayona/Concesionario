@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 public class VentaVehiculo {
 
-    //collection VEHICULOS
     private String codigo;
     private int precioVenta;
     private Collection <Vehiculo> vehiculos;
