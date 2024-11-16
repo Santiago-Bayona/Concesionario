@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 public class SuvElectrico extends SedanElectrico {
 
-    private boolean todoterreno;
+    private boolean cuatroxcuatro;
 
     public SuvElectrico(String codigo, String marca, boolean estado, String modelo, int cambios, int velocidadmaxima, int cilindraje,
             String autonomiacargacompleta, int tiempopromediocarga, int numeroPasajeros, int numeroPuertas,
@@ -16,12 +16,12 @@ public class SuvElectrico extends SedanElectrico {
             this.todoterreno = todoterreno;
     }
 
-    public boolean isTodoterreno() {
+    public boolean iscuatroxcuatro() {
         return todoterreno;
     }
 
-    public void setTodoterreno(boolean todoterreno) {
-        this.todoterreno = todoterreno;
+    public void setcuatroxcuatro(boolean cuatroxcuatro) {
+        this.cuatroxcuatro = cuatroxcuatro;
     }
 
     @Override
