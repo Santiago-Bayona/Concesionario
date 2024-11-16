@@ -6,11 +6,13 @@ public class PickUpGD extends VehiculoGD {
     private double CapaciadadCajaCarga;
     
     
-    public PickUpGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            TipoTransmision tipoTransmision, GD gd, int numeroPasajeros,
+    
+    
+    public PickUpGD(String Placa, String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroPasajeros,
             int numeroPuertas, int numeroBolsas, boolean aireAcondicionado, boolean camaraReversa, boolean aBS,
             boolean cuatroxCuatro, double capaciadadCajaCarga) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+        super(Placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.numeroBolsas = numeroBolsas;

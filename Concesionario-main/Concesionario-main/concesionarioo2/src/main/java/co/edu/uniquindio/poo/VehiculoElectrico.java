@@ -4,13 +4,11 @@ public class VehiculoElectrico extends Vehiculo {
    private String autonomiacargacompleta;
    private int tiempopromediocarga;
 
-    public VehiculoElectrico(String placa,String marca,boolean nuevoUsado,String modelo,int cambios,int velocidadmaxima,int cilindraje,String autonomiacargacompleta,int tiempopromediocarga,co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision){
-       super(placa,marca,nuevoUsado,modelo,cambios,velocidadmaxima,cilindraje,tipoTransmision);
-       this.autonomiacargacompleta=autonomiacargacompleta;
+    public VehiculoElectrico(String placa,String marca,boolean Nuevo,String modelo,int cambios,int velocidadmaxima,int cilindraje,String autonomiacargacompleta,int tiempopromediocarga,co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision){
+        super(marca, Nuevo, modelo, cambios, velocidadmaxima, cilindraje, tipoTransmision,placa);
+        this.autonomiacargacompleta=autonomiacargacompleta;
        this.tiempopromediocarga=tiempopromediocarga;
-        
-
-
+    
     }
 
     public String getAutonomiacargacompleta() {

@@ -5,11 +5,19 @@ public class BusHibrido extends VanHibrido {
     private int numeroEjes;
     private int numeroSalidasEmergencia;
 
-    public BusHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,boolean aireAcondicionado, boolean camaraReversa, int numeroBolsasAire, boolean ABS, int numeroEjes, int numeroSalidasEmergencia){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero, numeroPasajeros, numeroPuertas, capacidadMaletero, aireAcondicionado, camaraReversa, numeroBolsasAire, ABS);
+    
+
+    public BusHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,
+            boolean aireAcondicionado, boolean camaraReversa, int numeroBolsasAire, boolean aBS, int numeroEjes,
+            int numeroSalidasEmergencia) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero, numeroPasajeros, numeroPuertas, capacidadMaletero, aireAcondicionado, camaraReversa,
+                numeroBolsasAire, aBS);
         this.numeroEjes = numeroEjes;
-        this.numeroSalidasEmergencia = numeroSalidasEmergencia;       
-}
+        this.numeroSalidasEmergencia = numeroSalidasEmergencia;
+    }
 
     public int getNumeroEjes() {
         return numeroEjes;

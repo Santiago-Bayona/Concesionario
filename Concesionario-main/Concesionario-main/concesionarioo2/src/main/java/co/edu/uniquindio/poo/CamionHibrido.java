@@ -1,7 +1,5 @@
 package co.edu.uniquindio.poo;
 
-import co.edu.uniquindio.poo.TipoCamion;
-import co.edu.uniquindio.poo.Vehiculo.TipoTransmision;
 
 public class CamionHibrido extends VehiculoHibrido {
     private double capacidadCarga;
@@ -11,12 +9,18 @@ public class CamionHibrido extends VehiculoHibrido {
     private int numeroEjes;
     private TipoCamion tipoCamion;
 
-    public CamionHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, double capacidadCarga, boolean aireAcondicionado, boolean frenosAire, boolean ABS, int numeroEjes, TipoCamion tipoCamion){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero);
+    
+
+    public CamionHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, double capacidadCarga, boolean aireAcondicionado, boolean frenosAire, boolean aBS,
+            int numeroEjes, TipoCamion tipoCamion) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero);
         this.capacidadCarga = capacidadCarga;
         this.aireAcondicionado = aireAcondicionado;
         this.frenosAire = frenosAire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.numeroEjes = numeroEjes;
         this.tipoCamion = tipoCamion;
     }

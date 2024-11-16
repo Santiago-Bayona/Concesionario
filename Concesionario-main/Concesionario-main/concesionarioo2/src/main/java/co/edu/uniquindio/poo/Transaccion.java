@@ -1,30 +1,23 @@
 package co.edu.uniquindio.poo;
 
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.LinkedList;
 
 public class Transaccion {
 
     private String codigo;
     private LocalDate fechaRealizada;
+    private String detalleTransaccion;
     private int monto;
     private boolean TransaccionRealizada;
-    private Collection <Vehiculo> vehiculos;
-     private Empleado empleado; 
-    private Cliente cliente;
-    
 
-    public Transaccion(String codigo, LocalDate fechaRealizada, int monto,
-            boolean TransaccionRealizada, Empleado empleado, Cliente cliente) {
+    public Transaccion(String codigo, LocalDate fechaRealizada, String detalleTransaccion, int monto,
+            boolean TransaccionRealizada) {
 
         this.codigo = codigo;
         this.fechaRealizada = fechaRealizada;
+        this.detalleTransaccion = detalleTransaccion;
         this.monto = monto;
         this.TransaccionRealizada = TransaccionRealizada;
-        this.vehiculos = new LinkedList<>();
-        this.empleado = empleado;
-        this.cliente = cliente;
     }
 
     public String getCodigo() {
@@ -43,6 +36,14 @@ public class Transaccion {
         this.fechaRealizada = fechaRealizada;
     }
 
+    public String getDetalleTransaccion() {
+        return detalleTransaccion;
+    }
+
+    public void setDetalleTransaccion(String detalleTransaccion) {
+        this.detalleTransaccion = detalleTransaccion;
+    }
+
     public int getMonto() {
         return monto;
     }
@@ -58,31 +59,6 @@ public class Transaccion {
     public void setTransaccionRealizada(boolean transaccionRealizada) {
         TransaccionRealizada = transaccionRealizada;
     }
-
-    public Collection<Vehiculo> getVehiculos() {
-        return vehiculos;
-    }
-
-    public void setVehiculos(Collection<Vehiculo> vehiculos) {
-        this.vehiculos = vehiculos;
-    }
-
-    public Empleado getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-    
 
     @Override
     public String toString() {

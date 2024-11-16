@@ -7,11 +7,11 @@ public class VanGD extends VehiculoGD{
     public double capacidadMaletero;
     
 
-    public VanGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+    public VanGD(String placa,String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje,
             TipoTransmision tipoTransmision, GD gd, int numeroBolsas,
             int numeroPasajeros, int numeroPuertas, boolean camaraReversa, boolean aBS, boolean aireAcondicionado,
             double capacidadMaletero) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+        super(placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         this.numeroBolsas = numeroBolsas;
         NumeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;

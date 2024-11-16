@@ -10,16 +10,23 @@ public class PickUpHibrido extends VehiculoHibrido {
     private boolean cuatroXcuatro;
     private double capacidadCajaCarga;
 
-    public PickUpHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, boolean aireAcondicionado, boolean camaraReversa, int numeroBolsasAire, boolean ABS, boolean cuatroXcuatro, double capaciadadCajaCarga){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero);
+    
+
+    public PickUpHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, boolean aireAcondicionado,
+            boolean camaraReversa, int numeroBolsasAire, boolean aBS, boolean cuatroXcuatro,
+            double capacidadCajaCarga) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.aireAcondicionado = aireAcondicionado;
         this.camaraReversa = camaraReversa;
         this.numeroBolsasAire = numeroBolsasAire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.cuatroXcuatro = cuatroXcuatro;
-        this.capacidadCajaCarga = capaciadadCajaCarga;
+        this.capacidadCajaCarga = capacidadCajaCarga;
     }
 
     public int getNumeroPasajeros() {

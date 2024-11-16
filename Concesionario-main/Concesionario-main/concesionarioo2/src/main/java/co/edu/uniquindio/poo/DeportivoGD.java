@@ -4,11 +4,10 @@ public class DeportivoGD extends VehiculoGD{
     private int numeroPasajeros, numeroBolsas, numeroPuertas, CaballosFuerza, Tiempo;
 
     
-
-    public DeportivoGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima,
-            int cilindraje, TipoTransmision tipoTransmision, GD gd,
-            int numeroPasajeros, int numeroBolsas, int numeroPuertas, int caballosFuerza, int tiempo) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+    public DeportivoGD(String Placa, String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroPasajeros,
+            int numeroBolsas, int numeroPuertas, int caballosFuerza, int tiempo) {
+        super(Placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroBolsas = numeroBolsas;
         this.numeroPuertas = numeroPuertas;

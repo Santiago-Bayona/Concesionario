@@ -14,8 +14,15 @@ public class SedanHibrido extends VehiculoHibrido {
     private boolean sensorTraficoCruzado;
     private boolean asistentePermanenciaCarril;
 
-    public SedanHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero, boolean aireAcondicionado, boolean camaraReversa, boolean velocidadCrucero, int numeroBolsasAire, boolean ABS, boolean sensoresColision, boolean sensorTraficoCruzado, boolean asistentePermanenciaCarril){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero);
+    
+
+    public SedanHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,
+            boolean aireAcondicionado, boolean camaraReversa, boolean velocidadCrucero, int numeroBolsasAire,
+            boolean aBS, boolean sensoresColision, boolean sensorTraficoCruzado, boolean asistentePermanenciaCarril) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.capacidadMaletero = capacidadMaletero;
@@ -23,7 +30,7 @@ public class SedanHibrido extends VehiculoHibrido {
         this.camaraReversa = camaraReversa;
         this.velocidadCrucero = velocidadCrucero;
         this.numeroBolsasAire = numeroBolsasAire;
-        this.ABS = ABS;
+        ABS = aBS;
         this.sensoresColision = sensoresColision;
         this.sensorTraficoCruzado = sensorTraficoCruzado;
         this.asistentePermanenciaCarril = asistentePermanenciaCarril;

@@ -1,15 +1,14 @@
 package co.edu.uniquindio.poo;
 
-import co.edu.uniquindio.poo.Vehiculo.TipoTransmision;
 
 public class VehiculoHibrido extends Vehiculo {
     private boolean enchufable;
     private boolean hibridoLigero;
 
-    public VehiculoHibrido(String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+    public VehiculoHibrido(String Placa,String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
             int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero) {
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision);
-        this.enchufable = enchufable;
+                super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision,Placa);
+                this.enchufable = enchufable;
         this.hibridoLigero = hibridoLigero;
     }
 
@@ -34,4 +33,6 @@ public class VehiculoHibrido extends Vehiculo {
         return "VehiculoHibrido [enchufable=" + enchufable + ", hibridoLigero=" + hibridoLigero + "]";
     }
 
+    
+    
 }

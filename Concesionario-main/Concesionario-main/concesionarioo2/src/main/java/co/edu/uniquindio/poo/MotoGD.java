@@ -3,9 +3,9 @@ package co.edu.uniquindio.poo;
 public class MotoGD extends VehiculoGD{
     
 
-    public MotoGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+    public MotoGD(String placa,String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje,
     TipoTransmision tipoTransmision, GD gd){
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+        super(placa,marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
     }
 
     @Override

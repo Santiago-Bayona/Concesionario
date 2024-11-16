@@ -10,15 +10,21 @@ public class VanHibrido extends VehiculoHibrido {
     private int numeroBolsasAire;
     private boolean ABS;
 
-    public VanHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,boolean aireAcondicionado, boolean camaraReversa, int numeroBolsasAire, boolean ABS){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero);
+    
+
+    public VanHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, double capacidadMaletero,
+            boolean aireAcondicionado, boolean camaraReversa, int numeroBolsasAire, boolean aBS) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.capacidadMaletero = capacidadMaletero;
         this.aireAcondicionado = aireAcondicionado;
         this.camaraReversa = camaraReversa;
         this.numeroBolsasAire = numeroBolsasAire;
-        this.ABS = ABS;
+        ABS = aBS;
     }
 
     public int getNumeroPasajeros() {

@@ -74,9 +74,4 @@ public class VanE extends VehiculoElectrico{
                 + camaraReversa + ", numeroBolsasAire=" + numeroBolsasAire + ", ABS=" + ABS + ", capacidadMaletero="
                 + capacidadMaletero + "]";
     }
-
-    
-
-    
-
 }

@@ -1,7 +1,5 @@
 package co.edu.uniquindio.poo;
 
-import co.edu.uniquindio.poo.Vehiculo.TipoTransmision;
-
 public class DeportivoHibrido extends VehiculoHibrido {
     private int numeroPasajeros;
     private int numeroPuertas;
@@ -9,10 +7,16 @@ public class DeportivoHibrido extends VehiculoHibrido {
     private int caballosFuerza;
     private int tiempo100Km;
 
-    public DeportivoHibrido (String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision, boolean enchufable, boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, int numeroBolsasAire, int caballosFuerza, int tiempo100Km){
-        super(marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable, hibridoLigero);
+    
+
+    public DeportivoHibrido(String Placa, String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, boolean enchufable,
+            boolean hibridoLigero, int numeroPasajeros, int numeroPuertas, int numeroBolsasAire, int caballosFuerza,
+            int tiempo100Km) {
+        super(Placa, marca, nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, enchufable,
+                hibridoLigero);
         this.numeroPasajeros = numeroPasajeros;
-        this.numeroPuertas =numeroPuertas;
+        this.numeroPuertas = numeroPuertas;
         this.numeroBolsasAire = numeroBolsasAire;
         this.caballosFuerza = caballosFuerza;
         this.tiempo100Km = tiempo100Km;

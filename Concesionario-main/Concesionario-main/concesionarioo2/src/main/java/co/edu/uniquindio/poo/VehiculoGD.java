@@ -6,9 +6,9 @@ public class VehiculoGD extends Vehiculo{
     public enum GD{ 
         GASOLINA,DIESEL
     }
-    public VehiculoGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+    public VehiculoGD(String Placa,String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje,
             TipoTransmision tipoTransmision, GD gd) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision);
+        super(marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision,Placa);
         this.gd = gd;
     }
     public GD getGd() {

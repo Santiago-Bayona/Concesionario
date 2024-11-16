@@ -3,8 +3,8 @@ package co.edu.uniquindio.poo;
 public class Vehiculo {
 
     private String Marca;
-    private boolean NuevoUsado;
-    private String Modelo;
+    private boolean Nuevo;
+    private String Modelo,Placa;
     private int cambios;
     private int VelocidadMaxima;
     private int Cilindraje;
@@ -14,14 +14,15 @@ public class Vehiculo {
     } 
     
     
-    public Vehiculo(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision) {
+    public Vehiculo(String marca, boolean nuevo, String modelo, int cambios, int velocidadMaxima, int cilindraje, TipoTransmision tipoTransmision,String Placa) {
         this.Marca = marca;
-        this.NuevoUsado = nuevoUsado;
+        this.Nuevo = nuevo;
         this.Modelo = modelo;
         this.cambios = cambios;
         this.VelocidadMaxima = velocidadMaxima;
         this.Cilindraje = cilindraje;
         this.TipoTransmision = tipoTransmision;
+        this.Placa=Placa;
     }
     
     public String getMarca() {
@@ -30,11 +31,18 @@ public class Vehiculo {
     public void setMarca(String marca) {
         Marca = marca;
     }
-    public boolean isNuevoUsado() {
-        return NuevoUsado;
+
+    public String getPlaca() {
+        return Placa;
     }
-    public void setNuevoUsado(boolean nuevoUsado) {
-        NuevoUsado = nuevoUsado;
+    public void setPlaca(String placa) {
+        Placa = placa;
+    }
+    public boolean getNuevo() {
+        return Nuevo;
+    }
+    public void setNuevo(boolean nuevo) {
+        Nuevo = nuevo;
     }
     public String getModelo() {
         return Modelo;
@@ -69,7 +77,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo [Marca=" + Marca + ", NuevoUsado=" + NuevoUsado + ", Modelo=" + Modelo + ", cambios=" + cambios
+        return "Vehiculo [Marca=" + Marca + ", Nuevo=" + Nuevo + ", Modelo=" + Modelo + ", cambios=" + cambios
                 + ", VelocidadMaxima=" + VelocidadMaxima + ", Cilindraje=" + Cilindraje + ", TipoTransmision="
                 + TipoTransmision + ", Combustible=" + "]";
     }

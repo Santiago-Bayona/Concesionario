@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.Concensionario;
+package co.edu.uniquindio.poo;
 
 public class CamionGD extends VehiculoGD{
     private boolean ABS,aireAcondicionado,FrenosAire;
@@ -10,12 +10,12 @@ public class CamionGD extends VehiculoGD{
     }
     
     
-
-    public CamionGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            co.edu.uniquindio.poo.Concensionario.Vehiculo.TipoTransmision tipoTransmision, GD gd, boolean aBS,
+    
+    public CamionGD(String Placa, String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, GD gd, boolean aBS,
             boolean aireAcondicionado, boolean frenosAire, double capacidadCarga, int numeroEjes,
-            co.edu.uniquindio.poo.Concensionario.CamionGD.TipoCamion tipoCamion) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+            co.edu.uniquindio.poo.CamionGD.TipoCamion tipoCamion) {
+        super(Placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         ABS = aBS;
         this.aireAcondicionado = aireAcondicionado;
         FrenosAire = frenosAire;

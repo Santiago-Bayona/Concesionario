@@ -8,12 +8,14 @@ public class SedanGD extends VehiculoGD {
     private boolean aireAcondicionado, CamaraReversa, VelocidadCrucero, SensoresDeColision,TraficoCruzado,APC,ABS;
     
     
-    public SedanGD(String marca, boolean nuevoUsado, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-            TipoTransmision tipoTransmision, GD gd, int numeroPuertas,
+    
+
+    public SedanGD(String Placa, String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima,
+            int cilindraje, co.edu.uniquindio.poo.Vehiculo.TipoTransmision tipoTransmision, GD gd, int numeroPuertas,
             int numeroBolsas, int numeroPasajeros, double capacidadMaletero, boolean aireAcondicionado,
             boolean camaraReversa, boolean velocidadCrucero, boolean sensoresDeColision, boolean traficoCruzado,
             boolean aPC, boolean aBS) {
-        super(marca, nuevoUsado, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
+        super(Placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, gd);
         this.numeroPuertas = numeroPuertas;
         this.numeroBolsas = numeroBolsas;
         NumeroPasajeros = numeroPasajeros;
