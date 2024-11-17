@@ -227,6 +227,67 @@ public class Empresa {
         }
     }
 
+    public boolean actualizarCliente(String cedula, Cliente actualizado) {
+        boolean centinela = false;
+        for (Cliente cliente : clientes) {
+            if (cliente.getCedula().equals(cedula)) {
+                cliente.setNombre(actualizado.getNombre());
+                cliente.setApellidos(actualizado.getApellidos());
+                cliente.setEdad(actualizado.getEdad());
+                cliente.setCedula(actualizado.getCedula());
+                cliente.setCorreo(actualizado.getCorreo());
+                cliente.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                cliente.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    public boolean actualizarEmpleado(String cedula, Empleado actualizado) {
+        boolean centinela = false;
+        for (Empleado empleado : empleados) {
+            if (empleado.getCedula().equals(cedula)) {
+                empleado.setNombre(actualizado.getNombre());
+                empleado.setApellidos(actualizado.getApellidos());
+                empleado.setEdad(actualizado.getEdad());
+                empleado.setCedula(actualizado.getCedula());
+                empleado.setCorreo(actualizado.getCorreo());
+                empleado.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                empleado.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                empleado.setActivo(actualizado.getActivo());
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    
+    public boolean actualizarAdministrador(String cedula, Administrador actualizado) {
+        boolean centinela = false;
+        for (Administrador administrador : administradores) {
+            if (administrador.getCedula().equals(cedula)) {
+                administrador.setNombre(actualizado.getNombre());
+                administrador.setApellidos(actualizado.getApellidos());
+                administrador.setEdad(actualizado.getEdad());
+                administrador.setCedula(actualizado.getCedula());
+                administrador.setCorreo(actualizado.getCorreo());
+                administrador.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                administrador.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+
     @Override
     public String toString() {
         return "Empresa [nombre=" + nombre + ", administradores=" + administradores + ", transacciones=" + transacciones
