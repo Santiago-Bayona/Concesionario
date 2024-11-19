@@ -46,55 +46,80 @@ public class Empresa {
 
 
 
+/**
+ * Método para obtener la colección de administradores
+ * @return Colección de administradores
+ */
 
     public Collection<Administrador> getAdministradores() {
         return administradores;
     }
 
 
-
+/**
+ * Método para establecer la colección de administradores
+ * @param administradores Colección de administradores
+ */
 
     public void setAdministradores(Collection<Administrador> administradores) {
         this.administradores = administradores;
     }
 
 
-
+/**
+ * Método para obtener la colección de transacciones
+ * @return Colección de transacciones
+ */
 
     public Collection<Transaccion> getTransacciones() {
         return transacciones;
     }
 
 
-
+/**
+ * Método para establecer la colección de transacciones
+ * @param transacciones Colección de transacciones
+ */
 
     public void setTransacciones(Collection<Transaccion> transacciones) {
         this.transacciones = transacciones;
     }
 
 
-
+/**
+ * Método para obtener la colección de ventas de vehículos
+ * @return Colección de ventas de vehículos
+ */
 
     public Collection<VentaVehiculo> getVentas() {
         return ventas;
     }
 
 
-
+/**
+ * Método para establecer la colección de ventas de vehículos
+ * @param ventas Colección de ventas de vehículos
+ */
 
     public void setVentas(Collection<VentaVehiculo> ventas) {
         this.ventas = ventas;
     }
 
 
-
+/**
+ * Método para obtener la colección de compras de vehículos
+ * @return Colección de compras de vehículos
+ */
 
     public Collection<CompraVehiculo> getCompras() {
         return compras;
     }
 
 
-
+/**
+ * Método para establecer la colección de compras de vehículos
+ * @param compras Colección de compras de vehículos
+ */
 
     public void setCompras(Collection<CompraVehiculo> compras) {
         this.compras = compras;
