@@ -12,7 +12,18 @@ public class Empleado extends Persona{
 
 
     
-
+    /**
+ * Constructor de la clase Empleado
+ * @param nombre Nombre del empleado
+ * @param apellidos Apellidos del empleado
+ * @param correo Correo electrónico del empleado
+ * @param contraseñaCorrreo Contraseña del correo electrónico
+ * @param respuestaVerificacion Respuesta de verificación de seguridad
+ * @param edad Edad del empleado
+ * @param cedula Cédula del empleado
+ * @param preguntaSeguridad Objeto PreguntaSeguridad asociado
+ * @param activo Estado activo/inactivo del empleado
+ */
     public Empleado(String nombre, String apellidos, String correo, String contraseñaCorrreo,
             String respuestaVerificacion, int edad, String cedula,
             PreguntaSeguridad preguntaSeguridad, boolean activo) {
@@ -24,13 +35,25 @@ public class Empleado extends Persona{
         this.clientes =new LinkedList<>();
     }
 
+    /**
+ * Método para obtener el estado activo del empleado
+ * @return true si está activo, false en caso contrario
+ */
+
     public boolean getActivo() {
         return Activo;
     }
 
+    /**
+ * Método para establecer el estado activo del empleado
+ * @param activo Estado activo/inactivo del empleado
+ */
+
     public void setActivo(boolean activo) {
         Activo = activo;
     }
+
+   
 
     public Collection<Cliente> getCliente() {
         return clientes;
