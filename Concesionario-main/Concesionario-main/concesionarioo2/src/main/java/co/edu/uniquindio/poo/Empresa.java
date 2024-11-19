@@ -10,7 +10,12 @@ public class Empresa {
     public Collection<VentaVehiculo>ventas;
     public Collection<CompraVehiculo>compras;
     public Collection<AlquilerVehiculo>alquilerVehiculos;
-
+  
+    
+ /**
+ * Constructor de la clase Empresa
+ * @param nombre Nombre de la empresa
+ */
     public Empresa(String nombre) {
         this.nombre = nombre;
         this.administradores = new LinkedList<>();
@@ -22,14 +27,19 @@ public class Empresa {
     
     
     
-    
+    /**
+ * Método para obtener el nombre de la empresa
+ * @return nombre de la empresa
+ */
     public String getNombre() {
         return nombre;
     }
 
 
-
-
+  /**
+ * Método para establecer el nombre de la empresa
+ * @param nombre Nombre de la empresa
+ */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -106,7 +116,11 @@ public class Empresa {
 
 
 
-
+    /**
+ * Método para verificar si una transacción existe por su código
+ * @param codigo Código de la transacción
+ * @return false si la transacción existe, true en caso contrario
+ */
     public boolean verificarTransaccion(String codigo) {
         for (Transaccion transaccion : transacciones) {
             if (codigo.equals(transaccion.getCodigo())) {
@@ -116,11 +130,22 @@ public class Empresa {
         return true;
     }
 
+
+ /**
+ * Método para agregar una transacción
+ * @param transaccion Objeto Transacción a agregar
+ */
+
     public void agregarTransaccion(Transaccion transaccion){
         if(verificarTransaccion(transaccion.getCodigo())){
             transacciones.add(transaccion);
         }
     }
+
+    /**
+ * Método para eliminar una transacción
+ * @param codigo Código de la transacción a eliminar
+ */
 
     public void eliminarTransaccion(String codigo) {
         for (Transaccion transaccion : transacciones) {
@@ -131,6 +156,12 @@ public class Empresa {
         }
     }
 
+    /**
+ * Método para verificar si un administrador existe
+ * @param cedula Cédula del administrador
+ * @return false si el administrador existe, true en caso contrario
+ */
+
     public boolean verificarAdministrador(String cedula) {
         for (Administrador administrador : administradores) {
             if (cedula.equals(administrador.getCedula())) {
@@ -140,11 +171,21 @@ public class Empresa {
         return true;
     }
 
+    /**
+ * Método para eliminar un administrador de la empresa
+ * @param cedula Cédula del administrador a eliminar
+ */
+
     public void agregarAdministrador(Administrador administrador){
         if(verificarAdministrador(administrador.getCedula())){
             administradores.add(administrador);
         }
     }
+
+    /**
+ * Método para eliminar un administrador de la empresa
+ * @param cedula Cédula del administrador a eliminar
+ */
 
     public void eliminarAdministrador(String cedula) {
         for (Administrador administrador : administradores) {
@@ -155,6 +196,11 @@ public class Empresa {
         }
     }
 
+    /**
+ * Método para agregar una venta a la empresa
+ * @param venta Objeto VentaVehiculo a agregar
+ */
+
     public boolean verificarVenta(String codigo) {
         for (VentaVehiculo venta : ventas) {
             if (codigo.equals(venta.getCodigo())) {
@@ -164,11 +210,23 @@ public class Empresa {
         return true;
     }
 
+    
+/**
+ * Método para eliminar una venta de la empresa
+ * @param codigo Código de la venta a eliminar
+ */
+
     public void agregarVenta(VentaVehiculo venta){
         if(verificarVenta(venta.getCodigo())){
             ventas.add(venta);
         }
     }
+
+    /**
+ * Método para verificar si una compra existe
+ * @param codigo Código de la compra
+ * @return false si la compra existe, true en caso contrario
+ */
 
     public void eliminarVenta(String codigo) {
         for (VentaVehiculo venta : ventas) {
@@ -179,6 +237,13 @@ public class Empresa {
         }
     }
 
+
+    /**
+ * Método para verificar si una compra existe
+ * @param codigo Código de la compra
+ * @return false si la compra existe, true en caso contrario
+ */
+
     public boolean verificarCompra(String codigo) {
         for (CompraVehiculo compra : compras) {
             if (codigo.equals(compra.getCodigo())) {
@@ -188,11 +253,22 @@ public class Empresa {
         return true;
     }
 
+    
+/**
+ * Método para agregar una compra a la empresa
+ * @param compraVehiculo Objeto CompraVehiculo a agregar
+ */
+
     public void agregarCompra(CompraVehiculo compraVehiculo){
         if(verificarCompra(compraVehiculo.getCodigo())){
             compras.add(compraVehiculo);
         }
     }
+
+    /**
+ * Método para eliminar una compra de la empresa
+ * @param codigo Código de la compra a eliminar
+ */
 
     public void eliminarCompra(String codigo) {
         for (CompraVehiculo compra : compras) {
@@ -203,6 +279,12 @@ public class Empresa {
         }
     }
 
+    /**
+ * Método para verificar si un alquiler existe
+ * @param codigo Código del alquiler
+ * @return false si el alquiler existe, true en caso contrario
+ */
+
     public boolean verificarAlquiler(String codigo) {
         for (AlquilerVehiculo Alquiler : alquilerVehiculos) {
             if (codigo.equals(Alquiler.getCodigo())) {
@@ -212,11 +294,22 @@ public class Empresa {
         return true;
     }
 
+
+    /**
+ * Método para agregar un alquiler a la empresa
+ * @param Alquiler Objeto AlquilerVehiculo a agregar
+ */
+
     public void agregarAlquiler(AlquilerVehiculo Alquiler){
         if(verificarAlquiler(Alquiler.getCodigo())){
             alquilerVehiculos.add(Alquiler);
         }
     }
+
+    /**
+ * Método para eliminar un alquiler de la empresa
+ * @param codigo Código del alquiler a eliminar
+ */
 
     public void eliminarAlquiler(String codigo) {
         for (AlquilerVehiculo Alquiler : alquilerVehiculos) {
@@ -226,6 +319,14 @@ public class Empresa {
             }
         }
     }
+
+
+ /**
+ * Método para actualizar los datos de un cliente
+ * @param cedula Cédula del cliente a actualizar
+ * @param actualizado Objeto Cliente con los datos actualizados
+ * @return true si se actualizó exitosamente, false en caso contrario
+ */
 
     public boolean actualizarCliente(String cedula, Cliente actualizado) {
         boolean centinela = false;
@@ -245,6 +346,13 @@ public class Empresa {
         }
         return centinela;
     }
+
+    /**
+ * Método para actualizar los datos de un empleado
+ * @param cedula Cédula del empleado a actualizar
+ * @param actualizado Objeto Empleado con los datos actualizados
+ * @return true si se actualizó exitosamente, false en caso contrario
+ */
 
     public boolean actualizarEmpleado(String cedula, Empleado actualizado) {
         boolean centinela = false;
@@ -266,6 +374,14 @@ public class Empresa {
         return centinela;
     }
 
+
+    /**
+ * Método para actualizar los datos de un administrador
+ * @param cedula Cédula del administrador a actualizar
+ * @param actualizado Objeto Administrador con los datos actualizados
+ * @return true si se actualizó exitosamente, false en caso contrario
+ */
+
     
     public boolean actualizarAdministrador(String cedula, Administrador actualizado) {
         boolean centinela = false;
@@ -286,6 +402,13 @@ public class Empresa {
         }
         return centinela;
     }
+
+
+    
+/**
+ * Método para obtener una representación textual de la empresa
+ * @return Representación textual de la empresa
+ */
 
 
     @Override
