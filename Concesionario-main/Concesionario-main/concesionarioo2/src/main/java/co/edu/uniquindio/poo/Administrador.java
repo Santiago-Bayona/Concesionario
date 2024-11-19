@@ -38,35 +38,47 @@ public class Administrador extends Persona {
     }
 
     
-    
-    
+   /**
+     * metodo para obtener la coleccion de empleados
+     * @param empleado  
+     */
     
     public Collection<Empleado> getEmpleados() {
         return empleados;
     }
 
 
-
-
-
+     /**
+      * metodo para setear la coleccion de empleados
+      * @param empleados
+      */
     public void setEmpleados(Collection<Empleado> empleados) {
         this.empleados = empleados;
     }
 
+     /** 
+     * metodo para obtener la coleccion de clientes
+     * @param cliente
+     */
     public Collection<Cliente> getCliente() {
         return clientes;
     }
 
 
-
-
-
+    /**
+     * metodo para setear la coleccion de clientes
+     * @param clientes
+     *
+     */
     public void setCliente(Collection<Cliente> clientes) {
         this.clientes = clientes;
     }
 
 
-
+    /**
+     * metodo para obtener la coleccion de vehiculos electricos
+     * @return
+     */
     public Collection<VehiculoElectrico> getVehiculoElectricos() {
         return vehiculoElectricos;
     }
@@ -74,13 +86,19 @@ public class Administrador extends Persona {
 
 
 
-
+    /**
+     * metodo para setear la coleccion de vehiculos electricos
+     * @param vehiculoElectricos
+     */
     public void setVehiculoElectricos(Collection<VehiculoElectrico> vehiculoElectricos) {
         this.vehiculoElectricos = vehiculoElectricos;
     }
 
 
-
+     /**
+     * metodo para obtener la coleccion de vehiculos gasolina diesel
+     * @return
+     */
 
 
     public Collection<VehiculoGasolinaDiesel> getVehiculoGasolinaDiesels() {
@@ -89,7 +107,10 @@ public class Administrador extends Persona {
 
 
 
-
+    /** 
+     * metodo para setear la coleccion de vehiculos gasolina diesel
+     * @param VehiculoGasolinaDiesels
+    */
 
     public void setVehiculoGasolinaDiesels(Collection<VehiculoGasolinaDiesel> VehiculoGasolinaDiesels) {
         this.VehiculoGasolinaDiesels = VehiculoGasolinaDiesels;
@@ -97,7 +118,10 @@ public class Administrador extends Persona {
 
 
 
-
+     /**
+     * metodo para obtener la coleccion de vehiculos hibridos
+     * @return
+     */
 
     public Collection<VehiculoHibrido> getVehiculoHibridos() {
         return vehiculoHibridos;
@@ -106,7 +130,10 @@ public class Administrador extends Persona {
 
 
 
-
+     /**
+     * metodo para setear la coleccion de vehiculos hibridos
+     * @param vehiculoHibridos
+     */
     public void setVehiculoHibridos(Collection<VehiculoHibrido> vehiculoHibridos) {
         this.vehiculoHibridos = vehiculoHibridos;
     }
