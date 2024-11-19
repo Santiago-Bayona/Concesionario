@@ -99,9 +99,16 @@ public class Administrador extends Persona {
         this.vehiculoHibridos = vehiculoHibridos;
     }
 
+    
 
 
 
+    
+    /**
+     * metodo para verificar si el empleado ya esta registrado
+     * @param Cedula
+     * @return
+     */
 
     public boolean verificarEmpleado(String Cedula) {
         for (Empleado empleado : empleados) {
@@ -112,11 +119,23 @@ public class Administrador extends Persona {
         return true;
     }
 
+     /**
+     * metodo para agregar un empleado
+     * @param empleado
+     */
+
     public void agregarEmpleado(Empleado empleado){
         if(verificarEmpleado(empleado.getCedula())){
             empleados.add(empleado);
         }
     }
+
+   
+
+       /**
+     * metodo para eliminar un empleado
+     * @param cedula
+     */
 
     public void eliminarEmpleado(String cedula) {
         for (Empleado empleado : empleados) {
@@ -127,6 +146,15 @@ public class Administrador extends Persona {
         }
     }
 
+ 
+
+    /**
+     * metodo para verificar si el vehiculo electrico ya esta registrado
+     * @param placa
+     * @return
+     */
+
+
     public boolean verificarVehiculoElectrico(String placa) {
         for (VehiculoElectrico vehiculoElectrico : vehiculoElectricos) {
             if (placa.equals(vehiculoElectrico.getPlaca())) {
@@ -136,11 +164,21 @@ public class Administrador extends Persona {
         return true;
     }
 
+    /**
+     * metodo para agregar un vehiculo electrico
+     * @param vehiculoElectrico
+     */
+
     public void agregarVehiculoElectrico(VehiculoElectrico vehiculoElectrico){
         if(verificarVehiculoElectrico(vehiculoElectrico.getPlaca())){
             vehiculoElectricos.add(vehiculoElectrico);
         }
     }
+
+    /**
+     * metodo para eliminar un vehiculo electrico
+     * @param placa
+     */
 
     public void eliminarVehiculoElectrico(String placa) {
         for (VehiculoElectrico vehiculoElectrico : vehiculoElectricos) {
@@ -151,6 +189,11 @@ public class Administrador extends Persona {
         }
     }
 
+    /**
+     * metodo para verificar si el vehiculo gasolina diesel ya esta registrado
+     * @param placa
+     * @return
+     */
     public boolean verificarVehiculoGasolinaDiesel(String placa) {
         for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
             if (placa.equals(VehiculoGasolinaDiesel.getPlaca())) {
@@ -160,11 +203,22 @@ public class Administrador extends Persona {
         return true;
     }
 
+     /**
+     * metodo para agregar un vehiculo gasolina diesel
+     * @param VehiculoGasolinaDiesel
+     */
+
     public void agregarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel VehiculoGasolinaDiesel){
         if(verificarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel.getPlaca())){
             VehiculoGasolinaDiesels.add(VehiculoGasolinaDiesel);
         }
     }
+
+    
+    /**
+     * metodo para eliminar un vehiculo gasolina diesel
+     * @param placa
+     */
 
     public void eliminarVehiculoGasolinaDiesel(String placa) {
         for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
@@ -175,6 +229,13 @@ public class Administrador extends Persona {
         }
     }
 
+     /**
+     * metodo para verificar si el vehiculo hibrido ya esta registrado
+     * @param placa
+     * @return
+     */
+
+
     public boolean verificarVehiculoHibrido(String placa) {
         for (VehiculoHibrido vehiculoHibrido : vehiculoHibridos) {
             if (placa.equals(vehiculoHibrido.getPlaca())) {
@@ -184,11 +245,23 @@ public class Administrador extends Persona {
         return true;
     }
 
+      /**
+     * metodo para agregar un vehiculo hibrido
+     * @param vehiculoHibrido
+     */
+
     public void agregarVehiculoHibrido(VehiculoHibrido vehiculoHibrido){
         if(verificarVehiculoHibrido(vehiculoHibrido.getPlaca())){
             vehiculoHibridos.add(vehiculoHibrido);
         }
     }
+
+   
+
+     /**
+     * metodo para eliminar un vehiculo hibrido
+     * @param placa
+     */
 
     public void eliminarVehiculoHibrido(String placa) {
         for (VehiculoHibrido vehiculoHibrido : vehiculoHibridos) {
@@ -199,6 +272,15 @@ public class Administrador extends Persona {
         }
     }
 
+    
+
+     /**
+     * metodo para verificar si el cliente ya esta registrado
+     * @param cedula
+     * @return
+     */
+
+
     public boolean verificarCliente(String cedula) {
         for (Cliente cliente : clientes) {
             if (cedula.equals(cliente.getCedula())) {
@@ -208,11 +290,21 @@ public class Administrador extends Persona {
         return true;
     }
 
+    /**
+     * metodo para agregar un cliente
+     * @param cliente
+     */
+
     public void agregarCliente(Cliente cliente){
         if(verificarCliente(cliente.getCedula())){
             clientes.add(cliente);
         }
     }
+
+     /**
+     * metodo para eliminar un cliente
+     * @param cedula
+     */
 
     public void eliminarCliente(String cedula) {
         for (Cliente cliente : clientes) {
