@@ -12,6 +12,18 @@ public class Administrador extends Persona {
     public Collection<Cliente> clientes;
 
     
+     
+    /**
+     * metodo constructor de la clase Administrador
+     * @param nombre
+     * @param apellidos
+     * @param correo
+     * @param contraseñaCorrreo
+     * @param respuestaVerificacion
+     * @param edad
+     * @param cedula
+     * @param preguntaSeguridad
+     */
     
 
     public Administrador(String nombre, String apellidos, String correo, String contraseñaCorrreo,
