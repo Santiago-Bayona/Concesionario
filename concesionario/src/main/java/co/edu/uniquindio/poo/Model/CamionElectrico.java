@@ -8,7 +8,9 @@ public class CamionElectrico extends VehiculoElectrico {
     private int numeroEjes;
 
     public enum TipoCamion{
-        PLATAFORMA,VOLQUETE
+        PLATAFORMA,VOLQUETE;
+
+        
     }
 
     public CamionElectrico(String codigo, String marca, boolean estado, String modelo, int cambios, int velocidadmaxima, int cilindraje,

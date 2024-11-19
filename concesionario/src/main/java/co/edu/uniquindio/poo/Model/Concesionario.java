@@ -188,19 +188,25 @@ public class Concesionario {
         return true;
     }
 
-    public void agregarEmpleado(Empleado empleado){
+    public boolean agregarEmpleado(Empleado empleado){
+        boolean centinela = false;
         if(verificarEmpleado(empleado.getCedula())){
             empleados.add(empleado);
+            centinela=true;
         }
+        return centinela;
     }
 
-    public void eliminarEmpleado(String cedula) {
+    public boolean eliminarEmpleado(String cedula) {
+        boolean centinela = false;
         for (Empleado empleado : empleados) {
             if (empleado.getCedula().equals(cedula)) {
                 empleados.remove(empleado);
+                centinela = true;
                 break;
             }
         }
+        return centinela;
     }
 
     public boolean verificarVehiculoElectrico(String placa) {
@@ -236,19 +242,25 @@ public class Concesionario {
         return true;
     }
 
-    public void agregarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel VehiculoGasolinaDiesel){
+    public boolean agregarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel VehiculoGasolinaDiesel){
+        boolean centinela= false;
         if(verificarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel.getPlaca())){
             VehiculoGasolinaDiesels.add(VehiculoGasolinaDiesel);
+            centinela=true;
         }
+        return centinela;
     }
 
-    public void eliminarVehiculoGasolinaDiesel(String placa) {
+    public boolean eliminarVehiculoGasolinaDiesel(String placa) {
+        boolean centinela= false;
         for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
             if (VehiculoGasolinaDiesel.getPlaca().equals(placa)) {
                 VehiculoGasolinaDiesels.remove(VehiculoGasolinaDiesel);
+                centinela=true;
                 break;
             }
         }
+        return centinela;
     }
 
     public boolean verificarVehiculoHibrido(String placa) {
@@ -284,19 +296,25 @@ public class Concesionario {
         return true;
     }
 
-    public void agregarCliente(Cliente cliente){
+    public boolean agregarCliente(Cliente cliente){
+        boolean centinela = false;
         if(verificarCliente(cliente.getCedula())){
             clientes.add(cliente);
+            centinela=true;
         }
+        return centinela;
     }
 
-    public void eliminarCliente(String cedula) {
+    public boolean eliminarCliente(String cedula) {
+        boolean centinela =false;
         for (Cliente cliente : clientes) {
             if (cliente.getCedula().equals(cedula)) {
                 clientes.remove(cliente);
+                centinela=true;
                 break;
             }
         }
+        return centinela;
     }
 
 
@@ -335,19 +353,25 @@ public class Concesionario {
         return true;
     }
 
-    public void agregarAdministrador(Administrador administrador){
+    public boolean agregarAdministrador(Administrador administrador){
+        boolean centinela = false;
         if(verificarAdministrador(administrador.getCedula())){
             administradores.add(administrador);
+            centinela=true;
         }
+        return centinela;
     }
 
-    public void eliminarAdministrador(String cedula) {
+    public boolean eliminarAdministrador(String cedula) {
+        boolean centinela=false;
         for (Administrador administrador : administradores) {
             if (administrador.getCedula().equals(cedula)) {
                 administradores.remove(administrador);
+                centinela=true;
                 break;
             }
         }
+        return centinela;
     }
 
     public boolean verificarVenta(String codigo) {
@@ -420,6 +444,85 @@ public class Concesionario {
                 break;
             }
         }
+    }
+
+    public boolean actualizarCliente(String cedula, Cliente actualizado) {
+        boolean centinela = false;
+        for (Cliente cliente : clientes) {
+            if (cliente.getCedula().equals(cedula)) {
+                cliente.setNombre(actualizado.getNombre());
+                cliente.setApellidos(actualizado.getApellidos());
+                cliente.setEdad(actualizado.getEdad());
+                cliente.setCedula(actualizado.getCedula());
+                cliente.setCorreo(actualizado.getCorreo());
+                cliente.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                cliente.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    public boolean actualizarEmpleado(String cedula, Empleado actualizado) {
+        boolean centinela = false;
+        for (Empleado empleado : empleados) {
+            if (empleado.getCedula().equals(cedula)) {
+                empleado.setNombre(actualizado.getNombre());
+                empleado.setApellidos(actualizado.getApellidos());
+                empleado.setEdad(actualizado.getEdad());
+                empleado.setCedula(actualizado.getCedula());
+                empleado.setCorreo(actualizado.getCorreo());
+                empleado.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                empleado.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                empleado.setActivo(actualizado.getActivo());
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    
+    public boolean actualizarAdministrador(String cedula, Administrador actualizado) {
+        boolean centinela = false;
+        for (Administrador administrador : administradores) {
+            if (administrador.getCedula().equals(cedula)) {
+                administrador.setNombre(actualizado.getNombre());
+                administrador.setApellidos(actualizado.getApellidos());
+                administrador.setEdad(actualizado.getEdad());
+                administrador.setCedula(actualizado.getCedula());
+                administrador.setCorreo(actualizado.getCorreo());
+                administrador.setContraseñaCorrreo(actualizado.getContraseñaCorrreo());
+                administrador.setRespuestaVerificacion(actualizado.getRespuestaVerificacion());
+                
+                
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    public boolean ActualizarVehiculoGasolinaDiesel(String placa, VehiculoGasolinaDiesel actualizado) {
+        boolean centinela = false;
+        for (VehiculoGasolinaDiesel vehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
+            if (vehiculoGasolinaDiesel.getPlaca().equals(placa)) {
+                vehiculoGasolinaDiesel.setMarca(actualizado.getMarca());
+                vehiculoGasolinaDiesel.setModelo(actualizado.getModelo());
+                vehiculoGasolinaDiesel.setCambios(actualizado.getCambios());
+                vehiculoGasolinaDiesel.setCilindraje(actualizado.getCilindraje());
+                vehiculoGasolinaDiesel.setGasolinaDiesel(actualizado.getGasolinaDiesel());
+                vehiculoGasolinaDiesel.setNuevo(actualizado.getNuevo());
+                vehiculoGasolinaDiesel.setTipoTransmision(actualizado.getTipoTransmision());
+                vehiculoGasolinaDiesel.setVelocidadMaxima(actualizado.getVelocidadMaxima());
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
     }
 
     @Override

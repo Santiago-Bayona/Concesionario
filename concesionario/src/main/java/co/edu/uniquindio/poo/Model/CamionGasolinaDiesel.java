@@ -14,14 +14,14 @@ public class CamionGasolinaDiesel extends VehiculoGasolinaDiesel{
     public CamionGasolinaDiesel(String Placa, String marca, boolean Nuevo, String modelo, int cambios, int velocidadMaxima,
             int cilindraje, TipoTransmision tipoTransmision, GasolinaDiesel GasolinaDiesel, boolean aBS,
             boolean aireAcondicionado, boolean frenosAire, double capacidadCarga, int numeroEjes,
-            TipoCamion tipoCamion) {
+            TipoCamion tipoCamion2) {
         super(Placa, marca, Nuevo, modelo, cambios, velocidadMaxima, cilindraje, tipoTransmision, GasolinaDiesel);
         ABS = aBS;
         this.aireAcondicionado = aireAcondicionado;
         FrenosAire = frenosAire;
         CapacidadCarga = capacidadCarga;
         this.numeroEjes = numeroEjes;
-        TipoCamion = tipoCamion;
+        TipoCamion = tipoCamion2;
     }
     public boolean isABS() {
         return ABS;
