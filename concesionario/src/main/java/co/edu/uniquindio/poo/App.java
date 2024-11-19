@@ -15,6 +15,9 @@ import java.io.IOException;
 
 import co.edu.uniquindio.poo.Model.Concesionario;
 import co.edu.uniquindio.poo.ViewController.BienvenidoVC;
+import co.edu.uniquindio.poo.ViewController.GestionClienteVC;
+import co.edu.uniquindio.poo.ViewController.GestionEmpleadoVC;
+import co.edu.uniquindio.poo.ViewController.VehiculoGasolinaDieselVC;
 
 /**
  * JavaFX App
@@ -51,6 +54,74 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public void openVehiculoGD() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("/co/edu/uniquindio/poo/VehiculoGasolinaDiesel.fxml"));
+            Pane rootLayout = (Pane) loader.load();
+            VehiculoGasolinaDieselVC crudClienteVC = loader.getController();
+            crudClienteVC.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openCliente() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("/co/edu/uniquindio/poo/VehiculoGasolinaDiesel.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            GestionClienteVC crudClienteVC = loader.getController();
+            crudClienteVC.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openAdministrador() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("/co/edu/uniquindio/poo/VehiculoGasolinaDiesel.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            GestionClienteVC crudClienteVC = loader.getController();
+            crudClienteVC.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openEmpleado() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("/co/edu/uniquindio/poo/VehiculoGasolinaDiesel.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            GestionEmpleadoVC crudClienteVC = loader.getController();
+            crudClienteVC.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     
