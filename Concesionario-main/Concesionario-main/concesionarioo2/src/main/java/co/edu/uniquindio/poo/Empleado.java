@@ -53,7 +53,10 @@ public class Empleado extends Persona{
         Activo = activo;
     }
 
-   
+    /**
+ * Método para obtener la colección de clientes asociados al empleado
+ * @return Colección de clientes
+ */
 
     public Collection<Cliente> getCliente() {
         return clientes;
@@ -61,13 +64,19 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para establecer la colección de clientes asociados al empleado
+ * @param clientes Colección de clientes
+ */
 
     public void setCliente(Collection<Cliente> clientes) {
         this.clientes = clientes;
     }
 
-
+/**
+ * Método para obtener la colección de vehículos eléctricos
+ * @return Colección de vehículos eléctricos
+ */
 
     public Collection<VehiculoElectrico> getVehiculoElectricos() {
         return vehiculoElectricos;
@@ -75,7 +84,10 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para establecer la colección de vehículos eléctricos
+ * @param vehiculoElectricos Colección de vehículos eléctricos
+ */
 
     public void setVehiculoElectricos(Collection<VehiculoElectrico> vehiculoElectricos) {
         this.vehiculoElectricos = vehiculoElectricos;
@@ -83,7 +95,10 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para obtener la colección de vehículos a gasolina o diésel
+ * @return Colección de vehículos a gasolina o diésel
+ */
 
     public Collection<VehiculoGasolinaDiesel> getVehiculoGasolinaDiesels() {
         return VehiculoGasolinaDiesels;
@@ -91,7 +106,10 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para establecer la colección de vehículos a gasolina o diésel
+ * @param VehiculoGasolinaDiesels Colección de vehículos a gasolina o diésel
+ */
 
     public void setVehiculoGasolinaDiesels(Collection<VehiculoGasolinaDiesel> VehiculoGasolinaDiesels) {
         this.VehiculoGasolinaDiesels = VehiculoGasolinaDiesels;
@@ -99,7 +117,10 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para obtener la colección de vehículos híbridos
+ * @return Colección de vehículos híbridos
+ */
 
     public Collection<VehiculoHibrido> getVehiculoHibridos() {
         return vehiculoHibridos;
@@ -107,11 +128,21 @@ public class Empleado extends Persona{
 
 
 
-
+/**
+ * Método para establecer la colección de vehículos híbridos
+ * @param vehiculoHibridos Colección de vehículos híbridos
+ */
 
     public void setVehiculoHibridos(Collection<VehiculoHibrido> vehiculoHibridos) {
         this.vehiculoHibridos = vehiculoHibridos;
     }
+
+
+    /**
+ * Método para verificar si un vehículo eléctrico existe
+ * @param placa Placa del vehículo eléctrico
+ * @return false si el vehículo ya existe, true en caso contrario
+ */
 
     public boolean verificarVehiculoElectrico(String placa) {
         for (VehiculoElectrico vehiculoElectrico : vehiculoElectricos) {
@@ -122,11 +153,21 @@ public class Empleado extends Persona{
         return true;
     }
 
+    /**
+ * Método para agregar un vehículo eléctrico
+ * @param vehiculoElectrico Objeto VehiculoElectrico a agregar
+ */
+
     public void agregarVehiculoElectrico(VehiculoElectrico vehiculoElectrico){
         if(verificarVehiculoElectrico(vehiculoElectrico.getPlaca())){
             vehiculoElectricos.add(vehiculoElectrico);
         }
     }
+
+    /**
+ * Método para eliminar un vehículo eléctrico
+ * @param placa Placa del vehículo eléctrico a eliminar
+ */
 
     public void eliminarVehiculoElectrico(String placa) {
         for (VehiculoElectrico vehiculoElectrico : vehiculoElectricos) {
@@ -137,6 +178,14 @@ public class Empleado extends Persona{
         }
     }
 
+    
+    
+ /**
+ * Método para verificar si un vehículo a gasolina o diésel existe
+ * @param placa Placa del vehículo a gasolina o diésel
+ * @return false si el vehículo ya existe, true en caso contrario
+ */
+
     public boolean verificarVehiculoGasolinaDiesel(String placa) {
         for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
             if (placa.equals(VehiculoGasolinaDiesel.getPlaca())) {
@@ -146,11 +195,21 @@ public class Empleado extends Persona{
         return true;
     }
 
+/**
+ * Método para agregar un vehículo a gasolina o diésel
+ * @param VehiculoGasolinaDiesel Objeto VehiculoGasolinaDiesel a agregar
+ */
+
     public void agregarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel VehiculoGasolinaDiesel){
         if(verificarVehiculoGasolinaDiesel(VehiculoGasolinaDiesel.getPlaca())){
             VehiculoGasolinaDiesels.add(VehiculoGasolinaDiesel);
         }
     }
+
+    /**
+ * Método para eliminar un vehículo a gasolina o diésel
+ * @param placa Placa del vehículo a eliminar
+ */
 
     public void eliminarVehiculoGasolinaDiesel(String placa) {
         for (VehiculoGasolinaDiesel VehiculoGasolinaDiesel : VehiculoGasolinaDiesels) {
@@ -161,6 +220,12 @@ public class Empleado extends Persona{
         }
     }
 
+    /**
+ * Método para verificar si un vehículo híbrido existe
+ * @param placa Placa del vehículo híbrido
+ * @return false si el vehículo ya existe, true en caso contrario
+ */
+
     public boolean verificarVehiculoHibrido(String placa) {
         for (VehiculoHibrido vehiculoHibrido : vehiculoHibridos) {
             if (placa.equals(vehiculoHibrido.getPlaca())) {
@@ -170,11 +235,21 @@ public class Empleado extends Persona{
         return true;
     }
 
+    /**
+ * Método para agregar un vehículo híbrido
+ * @param vehiculoHibrido Objeto VehiculoHibrido a agregar
+ */
+
     public void agregarVehiculoHibrido(VehiculoHibrido vehiculoHibrido){
         if(verificarVehiculoHibrido(vehiculoHibrido.getPlaca())){
             vehiculoHibridos.add(vehiculoHibrido);
         }
     }
+
+    /**
+ * Método para eliminar un vehículo híbrido
+ * @param placa Placa del vehículo híbrido a eliminar
+ */
 
     public void eliminarVehiculoHibrido(String placa) {
         for (VehiculoHibrido vehiculoHibrido : vehiculoHibridos) {
@@ -185,6 +260,13 @@ public class Empleado extends Persona{
         }
     }
 
+    
+    /**
+ * Método para verificar si un cliente existe
+ * @param cedula Cédula del cliente
+ * @return false si el cliente ya existe, true en caso contrario
+ */
+
     public boolean verificarCliente(String cedula) {
         for (Cliente cliente : clientes) {
             if (cedula.equals(cliente.getCedula())) {
@@ -194,11 +276,21 @@ public class Empleado extends Persona{
         return true;
     }
 
+   
+/**
+ * Método para agregar un cliente al empleado
+ * @param cliente Objeto Cliente a agregar
+ */
     public void agregarCliente(Cliente cliente){
         if(verificarCliente(cliente.getCedula())){
             clientes.add(cliente);
         }
     }
+
+    /**
+ * Método para eliminar un cliente asociado al empleado
+ * @param cedula Cédula del cliente a eliminar
+ */
 
     public void eliminarCliente(String cedula) {
         for (Cliente cliente : clientes) {
@@ -208,6 +300,11 @@ public class Empleado extends Persona{
             }
         }
     }
+
+    /**
+ * Método para obtener una representación textual del empleado
+ * @return Representación textual del empleado
+ */
 
     @Override
     public String toString() {
