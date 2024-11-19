@@ -28,19 +28,31 @@ public class BienvenidoVC {
 
     @FXML
     void abrirInicioSesion(ActionEvent event) {
-
+        try {
+            app.openAdministrador();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
     @FXML
     void abrirEmpleado(ActionEvent event) {
-
+        try {
+            app.openEmpleado();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
     @FXML
     void abrirTransaccion(ActionEvent event) {
-
+        try {
+            app.openCliente();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void setApp(App app) {
