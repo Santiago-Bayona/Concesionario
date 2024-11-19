@@ -41,10 +41,6 @@ public class App {
         System.out.println(administrador1);
         System.out.println(CamionGasolinaDiesel1);
         System.out.println(DeportivoHibrido1);
-        System.out.println(transaccion1);
-        System.out.println(alquiler1);
-        System.out.println(compra1);
-        System.out.println(venta1);
         empleado1.agregarVehiculoGasolinaDiesel(CamionGasolinaDiesel1);
 
 
